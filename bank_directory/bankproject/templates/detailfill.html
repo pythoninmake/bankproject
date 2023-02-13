@@ -1,0 +1,502 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>CoBsine</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+      <!-- style css -->
+      <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+      <!-- fevicon -->
+      <link rel="icon" href="{% static 'images/fevicon.png' %}" type="image/gif" />
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="{% static 'css/jquery.mCustomScrollbar.min.css' %}">
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="{% static 'https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css' %}">
+      <!-- fonts -->
+      <link href="{% static 'https://fonts.googleapis.com/css?family=Poppins:400,700|Roboto:400,700&display=swap' %}" rel="stylesheet">
+      <!-- owl stylesheets -->
+      <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+      <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+      <link rel="stylesheet" href="{% static 'https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css' %}" media="screen">
+   </head>
+   <body>
+      <!--header section start -->
+      <div class="header_section">
+         <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="logo"><a href="index.html"><img src="{% static 'images/logo.png' %}"><b>Bank</b></a></div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+               <ul class="navbar-nav mr-auto">
+                  <li class="nav-item active">
+                     <a class="btn btn-danger" href="{% url 'index' %}">Home</a>
+                  </li>
+                  <li class="nav-item active">
+                     <a class="nav-link" href="logout">Logout</a>
+                  </li>wo
+
+<!--                  <li class="nav-item">-->
+<!--                     <a class="nav-link" href="blog.html">Branches</a>-->
+<!--                  </li>-->
+                   <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+          Branches
+        </a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="https://en.wikipedia.org/wiki/Thrissur">THRISSUR</a>
+          <a class="dropdown-item" href="https://en.wikipedia.org/wiki/Ernakulam">ERNAKULAM</a>
+<!--          <div class="dropdown-divider"></div>-->
+          <a class="dropdown-item" href="https://en.wikipedia.org/wiki/Kochi">KOCHI</a>
+           <a class="dropdown-item" href="https://en.wikipedia.org/wiki/Thiruvananthapuram">THIRUVANANTHAPURAM</a>
+           <a class="dropdown-item" href="https://en.wikipedia.org/wiki/Kozhikode">KOZHIKODE</a>
+        </div>
+      </li>
+<!--                  <li class="nav-item">-->
+<!--                     <a class="nav-link" href="about.html">About</a>-->
+<!--                  </li>-->
+<!--                  <li class="nav-item">-->
+<!--                     <a class="nav-link" href="events.html">Events</a>-->
+<!--                  </li>-->
+<!--                  <li class="nav-item">-->
+<!--                     <a class="nav-link" href="contact.html">Contact Us</a>-->
+<!--                  </li>-->
+               </ul>
+<!--               <form class="form-inline my-2 my-lg-0">-->
+<!--                  <div class="search_icon"><img src="{% static 'images/search-icon.png' %}"></div>-->
+<!--               </form>-->
+            </div>
+         </nav>
+         <!--banner section start -->
+<!--         <div class="banner_section layout_padding">-->
+<!--            <div class="container-fluid">-->
+<!--               <section class="slide-wrapper">-->
+<!--                  <div class="container-fluid">-->
+<!--                     <div id="myCarousel" class="carousel slide" data-ride="carousel">-->
+                        <!-- Indicators -->
+<!--                        <ol class="carousel-indicators">-->
+<!--                           <li data-target="#myCarousel" data-slide-to="0" class="active"></li>-->
+<!--                           <li data-target="#myCarousel" data-slide-to="1"></li>-->
+<!--                           <li data-target="#myCarousel" data-slide-to="2"></li>-->
+<!--                           <li data-target="#myCarousel" data-slide-to="3"></li>-->
+<!--                           <li data-target="#myCarousel" data-slide-to="4"></li>-->
+<!--                        </ol>-->
+                        <!-- Wrapper for slides -->
+<!--                        <div class="carousel-inner">-->
+<!--                           <div class="carousel-item active">-->
+<!--                              <div class="container">-->
+<!--                                 <div class="banner_main">-->
+<!--                                    {% if user.is_authenticated %}-->
+<!--                                    <h1 class="banner_taital">Hello {{user.username}}</h1>-->
+<!--                                    <p class="banner_text">Build a brighter financial future with COBSINE BANK pvt.LTD.</p>-->
+<!--                                    <div class="btn_main">-->
+<!--                                       <div class="contact_bt active "><a href="{% url 'detailfill' %}">Get Start Now</a></div>-->
+<!--                                       <div class="readmore_bt"><a href="#">Read More</a></div>-->
+<!--                                    </div>-->
+<!--                                    {% endif %}-->
+<!--                                 </div>-->
+<!--                              </div>-->
+<!--                           </div>-->
+<!--                           <div class="carousel-item">-->
+<!--                              <div class="container">-->
+<!--                                 <div class="banner_main">-->
+<!--                                    <h1 class="banner_taital">COBSINE BANK</h1>-->
+<!--                                    <p class="banner_text">Cobsine Bank is an indian multiplicational public sector bank and financial services statutory body headquaters in Thrissur,Kerala.</p>-->
+<!--                                    <div class="btn_main">-->
+<!--                                       <div class="contact_bt active "><a href="#">Contact Us</a></div>-->
+<!--&lt;!&ndash;                                       <div class="readmore_bt"><a href="#">Read More</a></div>&ndash;&gt;-->
+<!--                                    </div>-->
+<!--                                 </div>-->
+<!--                              </div>-->
+<!--                           </div>-->
+<!--                           <div class="carousel-item">-->
+<!--                              <div class="container">-->
+<!--                                 <div class="banner_main">-->
+<!--                                    <h1 class="banner_taital">COBSINE BANK</h1>-->
+<!--                                    <p class="banner_text">Cobsine Bank is an indian multiplicational public sector bank and financial services statutory body headquaters in Thrissur,Kerala.</p>-->
+<!--                                    <div class="btn_main">-->
+<!--                                       <div class="contact_bt active "><a href="#">Contact Us</a></div>-->
+<!--&lt;!&ndash;                                       <div class="readmore_bt"><a href="#">Read More</a></div>&ndash;&gt;-->
+<!--                                    </div>-->
+<!--                                 </div>-->
+<!--                              </div>-->
+<!--                           </div>-->
+<!--                           <div class="carousel-item">-->
+<!--                              <div class="container">-->
+<!--                                 <div class="banner_main">-->
+<!--                                    <h1 class="banner_taital">COBSINE BANK</h1>-->
+<!--                                    <p class="banner_text">Cobsine Bank is an indian multiplicational public sector bank and financial services statutory body headquaters in Thrissur,Kerala.</p>-->
+<!--                                    <div class="btn_main">-->
+<!--                                       <div class="contact_bt active "><a href="#">Contact Us</a></div>-->
+<!--&lt;!&ndash;                                       <div class="readmore_bt"><a href="#">Read More</a></div>&ndash;&gt;-->
+<!--                                    </div>-->
+<!--                                 </div>-->
+<!--                              </div>-->
+<!--                           </div>-->
+<!--                           <div class="carousel-item">-->
+<!--                              <div class="container">-->
+<!--                                 <div class="banner_main">-->
+<!--                                    {% if user.is_authenticated %}-->
+<!--                                    <h1 class="banner_taital">COBSINE BANK Hello {{user.username}}</h1>-->
+<!--                                    <p class="banner_text">Cobsine Bank is an indian multiplicational public sector bank and financial services statutory body headquaters in Thrissur,Kerala.</p>-->
+<!--                                    <div class="btn_main">-->
+<!--                                       <div class="contact_bt active "><a href="#">Get Start Now</a></div>-->
+<!--&lt;!&ndash;                                       <div class="readmore_bt"><a href="#">Read More</a></div>&ndash;&gt;-->
+<!--                                    </div>-->
+<!--                                    {% endif %}-->
+<!--                                 </div>-->
+<!--                              </div>-->
+<!--                           </div>-->
+<!--                        </div>-->
+<!--                     </div>-->
+<!--                  </div>-->
+<!--               </section>-->
+<!--            </div>-->
+<!--         </div>-->
+         <!--banner section end -->
+<!--      </div>-->
+      <div>
+   <h1 style="color:red;text-align:center;font-family:Verdana;"><b><i><u>Fill In Details</u></i></b></h1>
+      <form action="{% url 'detailfill' %}" method="post">
+          {% csrf_token %}
+          <label><b>Name :</b></label>
+          <input type="text" name="name" placeholder="Your Name" required><br>
+          <label><b>Date Of Birth :</b></label>
+          <input type="date" name="date" required><br>
+          <label><b>Age :</b></label>
+          <input type="text" name="age" placeholder="Your Age" required><br>
+          <label><b>Gender :</b></label><br>
+          <input type="radio" name="gender" required>Male<br>
+          <input type="radio" name="gender" required>Female<br>
+          <label><b>Phone.no :</b></label>
+          <input type="text" name="phone" placeholder="Your Phone.no." required><br>
+          <label><b>Email :</b></label>
+          <input type="email" name="email" placeholder="Your Email" required><br>
+          <label><b>Address :</b></label>
+          <input type="text" name="address" placeholder="Address" required><br>
+          <label><b>Materials Provided :</b></label>
+          <input type="checkbox" name="materials">Credit card
+          <input type="checkbox" name="materials">Debit card
+          <input type="checkbox" name="materials">Cheque
+          <br>
+<!--          <table>-->
+<!--              <tr>-->
+<!--                  <td>-->
+<!--                      <b>-->
+<!--                      Choose District :-->
+<!--                          </b>-->
+<!--                  </td>-->
+<!--                  <td>-->
+<!--                      <select>-->
+<!--                          <option>Go</option>-->
+<!--                          <option>THRISSUR</option>-->
+<!--                          <option>ERNAKULAM</option>-->
+<!--                          <option>KOCHI</option>-->
+<!--                          <option>THIRUVANANTHAPURAM</option>-->
+<!--                          <option>KOZHIKODE</option>-->
+<!--                          <option>Calicut</option>-->
+<!--                      </select>-->
+<!--                  </td>-->
+<!--              </tr>-->
+<!--              <tr>-->
+<!--                  <td>-->
+<!--                      <b>-->
+<!--                      Choose Branch :-->
+<!--                          </b>-->
+<!--                  </td>-->
+<!--                  <td>-->
+<!--                      <select>-->
+<!--                          <option>Go</option>-->
+<!--                          <option>THRISSUR</option>-->
+<!--                          <option>ERNAKULAM</option>-->
+<!--                          <option>KOCHI</option>-->
+<!--                          <option>THIRUVANANTHAPURAM</option>-->
+<!--                          <option>KOZHIKODE</option>-->
+<!--                      </select>-->
+<!--                  </td>-->
+<!--              </tr>-->
+<!--              <tr>-->
+<!--                  <td>-->
+<!--                      <b>-->
+<!--                      Choose Account Type :-->
+<!--                          </b>-->
+<!--                  </td>-->
+<!--                  <td>-->
+<!--                      <select>-->
+<!--                          <option>Go</option>-->
+<!--                          <option>Savings Account</option>-->
+<!--                          <option>Current Account</option>-->
+<!--                          <option>Salary Account</option>-->
+<!--                          <option>Joint Account</option>-->
+<!--                      </select>-->
+<!--                  </td>-->
+<!--              </tr>-->
+
+<!--          </table>-->
+<!--<div class="container">-->
+<!--    choose branch code-->
+<!--          <div class="row">-->
+<!--          <label><b>&ndash;&gt;Choose District :</b></label><br>-->
+<!--          <select>-->
+<!--              <option>Select</option>-->
+<!--              <option>THRISSUR</option>-->
+<!--              <option>ERNAKULAM</option>-->
+<!--              <option>KOCHI</option>-->
+<!--              <option>THIRUVANANTHAPURAM</option>-->
+<!--              <option>KOZIKODE</option>-->
+<!--          </select><br>-->
+<!--    </div><br>-->
+<!--          <label for="&ndash;&gt;Choose District :" title="branch">Choose Branch :</label>-->
+<!--          <select id="&ndash;&gt;Choose District :" name="&ndash;&gt;Choose District :">-->
+<!--              <optgroup label="THRISSUR">-->
+<!--                  <option value="Select Branch">Select Branch</option>-->
+<!--                  <option value="East Fort">East Fort</option>-->
+<!--                  <option value="West Fort">West Fort</option>-->
+<!--                  <option value="Guruvayoor">Guruvayoor</option>-->
+<!--                  <option value="M.G.Road">M.G.Road</option>-->
+<!--              </optgroup>-->
+<!--              <optgroup label="ERNAKULAM">-->
+<!--                  <option value="East Fort">East Fort</option>&ndash;&gt;-->
+<!--                  <option value="Fort Kochi">Fort Kochi</option>-->
+<!--                  <option value="Vytilla">Vytilla</option>-->
+<!--                  <option value="Kakkanad">Kakkanad</option>-->
+<!--                  </optgroup>-->
+<!--          </select>-->
+<!--          <div class="row">-->
+<!--          <label><b>&ndash;&gt;Choose Branch :</b></label><br>-->
+<!--          <select>-->
+<!--              <optgroup label="THRISSUR" >-->
+<!--                  <option><b>Select</b></option>-->
+
+<!--                  <option><b><u>&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&ndash;&gt;[THRISSUR]<-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;</u></b></option>-->
+<!--                  <option>East Fort</option>-->
+<!--                  <option>West Fort</option>-->
+<!--                  <option>Guruvayoor</option>-->
+<!--                  <option>M.G.Road</option>-->
+<!--                  </optgroup>-->
+
+<!--              <optgroup label="ERNAKULAM">-->
+<!--                  <option><b>-&#45;&#45;&#45;&#45;&#45;&#45;&ndash;&gt;[ERNAKULAM]<-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;</b></option>-->
+<!--                  <option>East Fort</option>-->
+<!--                  <option>Fort Kochi</option>-->
+<!--                  <option>Vytilla</option>-->
+<!--                  <option>Kakkanad</option>-->
+<!--              </optgroup>-->
+<!--              <optgroup label="KOCHI">-->
+<!--                  <option><b>-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&ndash;&gt;[KOCHI]<-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;</b></option>-->
+<!--                  <option>East Fort</option>-->
+<!--                  <option>Fort Kochi</option>-->
+<!--                  <option>West Fort</option>-->
+<!--                  <option>M.G.Road</option>-->
+<!--              </optgroup>-->
+<!--              <optgroup label="THIRUVANANTHAPURAM">-->
+<!--                  <option><b>&#45;&#45;&ndash;&gt;[THIRUVANANTHAPURAM]<&#45;&#45;&#45;&#45;</b></option>-->
+<!--                  <option>Parasala</option>-->
+<!--                  <option>Varkala</option>-->
+<!--                  <option>Thruvanpadi</option>-->
+<!--                  <option>Neyattinkara</option>-->
+<!--              </optgroup>-->
+<!--              <optgroup label="KOZIKODE">-->
+<!--                  <option><b>-&#45;&#45;&#45;&#45;&#45;&#45;&ndash;&gt;[KOZHIKODE]<-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;</b></option>-->
+<!--                  <option>Town Branch</option>-->
+<!--                  <option>Cooorparation Road</option>-->
+<!--                  <option>M.G.Road</option>-->
+<!--                  <option>Municipale Road</option>-->
+<!--              </optgroup>-->
+<!--          </select>-->
+<!--          </div><br>-->
+<!--          <div class="row">-->
+<!--              <label><b>&ndash;&gt;Account Types :</b></label><br>-->
+<!--          <select><br>-->
+<!--              <option>Select</option>-->
+<!--              <option>Savings Account</option>-->
+<!--              <option>Current Account</option>-->
+<!--              <option>Salary Account</option>-->
+<!--              <option>Joint Account</option>-->
+<!--          </select>-->
+<!--              </div><br>-->
+<!--</div>-->
+<!--          <br>-->
+<!--          <div class="form-group">-->
+<!--              <label for="branch" class="form-control">Choose Branch</label>-->
+<!--              <select name="branch" id="branch" class="form-control" required>-->
+<!--                  <option value="THRISSUR">Select Branch</option>-->
+<!--                  <option value="THRISSUR">East Fort</option>&ndash;&gt;-->
+<!--                  <option value="THRISSUR">West Fort</option>-->
+<!--                  <option value="THRISSUR">Guruvayoor</option>-->
+<!--                  <option value="THRISSUR">M.G.Road</option>-->
+<!--              </select>-->
+<!--              <select name="branch" id="branch" class="form-control" required>-->
+<!--                  <option value="ERNAKULAM">East Fort</option>&ndash;&gt;-->
+<!--                  <option value="ERNAKULAM">Fort Kochi</option>-->
+<!--                  <option value="ERNAKULAM">Vytilla</option>-->
+<!--                  <option value="ERNAKULAM">Kakkanad</option>-->
+<!--              </select>-->
+<!--          </div>-->
+          <div>
+              <label>-->Choose District</label><br>
+              <select name="dist" id="district" class="form-control" required>
+                  <option value="" >--Select district--</option>
+                  {% for item in district %}
+                  <option value="{{ item.id }}" >{{ item.district }}</option>
+                  {% endfor %}
+              </select>
+          </div><br>
+          <div>
+              <label>-->Choose Branch</label><br>
+              <select name="branc" id="branch" class="form-control" required>
+                  <option value="" >--Select Branch--</option>
+                  {% for item in branch %}
+                  <option value="{{ item.distid_id }}">{{ item.branch }}</option>
+                  {% endfor %}
+              </select>
+              </div><br>
+          <div class="row">
+              <label><b>-->Account Types :</b></label><br>
+          <select required><br>
+              <option>Select</option>
+              <option>Savings Account</option>
+              <option>Current Account</option>
+              <option>Salary Account</option>
+              <option>Joint Account</option>
+          </select>
+              </div><br>
+          <input class="btn btn-success" type="submit">
+<!--          <label><b>Choose Account Type :</b></label><br>-->
+<!--          <select>-->
+<!--              <option>Select</option>-->
+<!--              <option>Savings Account</option>-->
+<!--              <option>Current Account</option>-->
+<!--              <option>Salary Account</option>-->
+<!--              <option>Joint Account</option>-->
+<!--          </select>-->
+
+<!--          <a class="btn btn-success" href="{% url 'lastpage' %}">submit</a>-->
+<!--          <label><b>Choose District :</b></label><br>-->
+<!--          <select>-->
+<!--              <option>Select</option>-->
+<!--              <option>THRISSUR</option>-->
+<!--              <option>ERNAKULAM</option>-->
+<!--              <option>KOCHI</option>-->
+<!--              <option>THIRUVANANTHAPURAM</option>-->
+<!--              <option>KOZHIKODE</option>-->
+<!--              <option>Calicut</option>-->
+<!--          </select>-->
+<!--          <label><b>Choose Branch :</b></label><br>-->
+<!--          <select>-->
+<!--              <option>Select</option>-->
+<!--              <option>THRISSUR</option>-->
+<!--              <option>ERNAKULAM</option>-->
+<!--              <option>KOCHI</option>-->
+<!--              <option>THIRUVANANTHAPURAM</option>-->
+<!--              <option>KOZHIKODE</option>-->
+<!--          </select>-->
+<!--          </br>-->
+<!--          <label><b>Choose Account Type :</b></label><br>-->
+<!--          <select>-->
+<!--              <option>Select</option>-->
+<!--              <option>Savings Account</option>-->
+<!--              <option>Current Account</option>-->
+<!--              <option>Salary Account</option>-->
+<!--              <option>Joint Account</option>-->
+<!--              <option>KOZHIKODE</option>-->
+<!--          </select>-->
+
+
+      </form>
+<!--          {% for msg in messages %}-->
+<!--<h4 style="color:red;">{{msg}}</h4>-->
+<!--{% endfor %}-->
+<!--      </div>-->
+                <script>
+              $(document).ready(function(){
+
+                var district = $("#district");
+                var branch = $("#branch");
+                var $options = branch.find('option');
+                district.on('change',function(){
+                   branch.html($options.filter('[value="'+ this.value  +'"]'));
+                }).trigger('change');
+
+
+              });
+              </script>
+         <!-- footer section start -->
+      <div class="footer_section layout_padding">
+         <div class="container">
+            <div class="location_main">
+               <div class="location_text"><img src="{% static 'images/map-icon.png' %}"><span class="padding_left_10"><a href="#">Location</a></span></div>
+               <div class="location_text center"><img src="{% static 'images/call-icon.png' %}"><span class="padding_left_10"><a href="#">Call ; 01 1234567890</a></span></div>
+               <div class="location_text right"><img src="{% static 'images/mail-icon.png' %}"><span class="padding_left_10"><a href="#">demo@gmail.com</a></span></div>
+            </div>
+            <div class="footer_section_2">
+               <div class="row">
+                  <div class="col-lg-4">
+                     <h2 class="footer_taital">About</h2>
+                     <p class="footer_text">There are many variations of passages of Lorem Ipsum available, but the majority havThere are many variations of passages of Lorem Ipsum available, but the majority hav</p>
+                  </div>
+                  <div class="col-lg-4">
+                     <h2 class="footer_taital">Services Link</h2>
+                     <p class="footer_text">There are many variations of passages of Lorem Ipsum available, but the majority havThere are many variations of passages of Lorem Ipsum available, but the majority hav</p>
+                  </div>
+                  <div class="col-lg-4">
+                     <h2 class="footer_taital">Subscribe</h2>
+                     <input type="text" class="Enter_text" placeholder="Enter Your Email" name="Enter Your Email">
+                     <div class="subscribe_bt"><a href="#">Subscribe</a></div>
+                     <div class="social_icon">
+                        <ul>
+                           <li><a href="#"><img src="{% static 'images/fb-icon.png' %}"></a></li>
+                           <li><a href="#"><img src="{% static 'images/twitter-icon.png' %}"></a></li>
+                           <li><a href="#"><img src="{% static 'images/linkedin-icon.png' %}"></a></li>
+                           <li><a href="#"><img src="{% static 'images/instagram-icon.png' %}"></a></li>
+                           <li><a href="#"><img src="{% static 'images/youtub-icon.png' %}"></a></li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- footer section end -->
+      <!-- copyright section start -->
+      <div class="copyright_section">
+         <div class="container">
+            <p class="copyright_text">Copyright 2020 All Rights Reserved.<a href="https://html.design"> Free  html Templates</a></p>
+         </div>
+      </div>
+      <!-- copyright section end -->
+      <!-- Javascript files-->
+
+      <script src="{% static 'js/jquery.min.js' %}"></script>
+      <script src="{% static 'js/popper.min.js' %}"></script>
+      <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+      <script src="{% static 'js/jquery-3.0.0.min.js' %}"></script>
+      <script src="{% static 'js/plugin.js' %}"></script>
+      <!-- sidebar -->
+      <script src="{% static 'js/jquery.mCustomScrollbar.concat.min.js' %}"></script>
+<!--      <script src="{% static 'js/custom.js' %}"></script>-->
+      <!-- javascript -->
+
+          <script src="{% static 'js/owl.carousel.js' %}"></script>
+          <script src="{% static 'https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js' %}"></script>
+
+   </body>
+</html>
